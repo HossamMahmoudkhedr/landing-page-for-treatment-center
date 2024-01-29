@@ -1,0 +1,221 @@
+:root {
+	--green: #28b055;
+}
+@font-face {
+	font-family: Alarabiya;
+	src: url(./assets/fonts/Alarabiya\ Normal\ Font.ttf);
+}
+@font-face {
+	font-family: droidarabickufi;
+	src: url(./assets/fonts/Droid.Arabic.Kufi_DownloadSoftware.iR_.ttf);
+}
+
+ul li a,
+h1,
+h2,
+h3 {
+	font-family: Alarabiya;
+}
+
+h4,
+p {
+	font-family: droidarabickufi;
+}
+
+ul li {
+	list-style: none;
+}
+
+li,
+p {
+	font-size: 22.84px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+.heading {
+	font-size: 65.8px;
+}
+/* Start Hero Section */
+.hero {
+	/* height: 100vh; */
+	background-image: url(./assets/images/spices.jpg);
+	background-position: top left;
+	background-size: 75%;
+	background-repeat: no-repeat;
+	padding-bottom: 5rem;
+}
+
+.logo {
+	width: 150px;
+}
+
+.links li a {
+	font-size: 28.3px;
+}
+
+.bg_green {
+	background-color: var(--green);
+}
+
+.text_green {
+	color: var(--green);
+}
+
+.content {
+	gap: 3rem;
+}
+.hero-content {
+	margin-top: 6rem;
+}
+.hero-content div {
+	width: 43%;
+}
+
+/* .hero-leafs {
+	bottom: 20px;
+	right: 35px;
+} */
+
+.custom-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--green);
+	padding: 8px;
+	border-radius: 42%;
+}
+
+/* .bgImage {
+	z-index: -1;
+	top: -70px;
+} */
+/* End Hero Section */
+/* Start About Section */
+.about {
+	background: url(./assets/images/leafs-bg.png), var(--green);
+	background-position: center;
+	background-size: 89%;
+	background-repeat: no-repeat;
+	padding: 4rem 0 7rem 0;
+}
+/* .about div div div:first-child {
+	width: 57.5%;
+} */
+.about div div div:last-child {
+	width: 42.5%;
+}
+.about div div div:last-child p {
+	font-size: 21.05px;
+	margin-bottom: 7px;
+}
+/* End About Section */
+
+/* Start Products Section */
+.products {
+	background-image: url(./assets/images/spices2.jpg);
+	background-position: top left;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	padding-bottom: 2rem;
+}
+
+/* End Products Section */
+/* Start Services Section */
+.services div h4 {
+	font-size: 36.69px;
+}
+
+.service {
+	height: 324px;
+}
+/* End Services Section */
+/* Start Footer */
+footer {
+	padding-top: 3rem;
+	padding-bottom: 5rem;
+}
+footer div div {
+	gap: 4rem;
+}
+footer div div:last-child a {
+	font-size: 22.84px;
+}
+/* End Footer */
+
+/* Start Media Query */
+
+@media (max-width: 992px) {
+	.heading {
+		font-size: 40px;
+	}
+	li,
+	p {
+		font-size: 16px;
+	}
+
+	/* Start Responsive Hero section */
+	.menu,
+	.close {
+		cursor: pointer;
+		width: 30px;
+	}
+	nav div:nth-child(2) {
+		position: absolute;
+		background-color: white;
+	}
+	.hero {
+		background-image: none;
+		padding-bottom: 3rem;
+	}
+	.hero-content {
+		margin-top: 3rem;
+	}
+	.hero-content div {
+		width: auto;
+	}
+	.hero-leafs img {
+		width: 255px;
+	}
+	/* End Responsive Hero section */
+
+	/* Start Responsive About Section */
+	.about {
+		padding: 4rem 0 4rem 0;
+		background-image: none;
+	}
+	.about div div div img {
+		width: 300px;
+	}
+	.about div div div:last-child {
+		width: auto;
+	}
+	.about div div div:last-child p {
+		font-size: 16px;
+		margin-bottom: 4px;
+	}
+	/* End Responsive About Section */
+
+	/* Start Responsive Products Section */
+	.products {
+		background-image: none;
+	}
+	/* End Responsive Products Section */
+	/* Start Responsive Services Section */
+	.service {
+		height: auto;
+	}
+	.service > div {
+		width: 100%;
+	}
+	footer div div {
+		gap: 2rem;
+	}
+	footer div div:last-child a {
+		font-size: 16px;
+	}
+	/* End Responsive Services Section */
+}
+
+/* End Media Query */
