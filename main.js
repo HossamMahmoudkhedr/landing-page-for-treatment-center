@@ -35,7 +35,8 @@ const setServices = () => {
 					</div>
 					<div>
 						<img
-						class="w-100"
+							class="w-100"
+							loading="lazy"
 							src="./assets/images/${service.image}"
 							alt="${service.title}" />
 					</div>
