@@ -7,6 +7,8 @@ const menuContent = document.querySelector('.menu-content');
 const rightDetails = document.querySelector('.details .right');
 const leftDetails = document.querySelector('.details .left');
 const servicesContainer = document.querySelector('.services');
+let service = [];
+const DRImage = document.querySelector('.about .container div > div img');
 
 const setDetails = (data, container) => {
 	let html = ``;
@@ -20,7 +22,7 @@ const setServices = () => {
 	let html = ``;
 	services.map((service) => {
 		html += `
-			<div class="service d-flex flex-column-reverse flex-lg-row justify-content-lg-between align-items-center gap-2 gap-lg-0">
+			<div class="service hidden d-flex flex-column-reverse flex-lg-row justify-content-lg-between align-items-center gap-2 gap-lg-0">
 					<div>
 						<h4 class="text_green fw-light mb-4 text-center text-lg-end">${
 							service.title
@@ -44,6 +46,7 @@ const setServices = () => {
 		`;
 	});
 	servicesContainer.innerHTML = html;
+	service = document.querySelectorAll('.service');
 };
 
 const showHideMenu = () => {
@@ -52,8 +55,22 @@ const showHideMenu = () => {
 	closeIcon.classList.toggle('d-none');
 };
 
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('show');
+			entry.target.classList.remove('hidden');
+		}
+	});
+});
+
 setDetails(products.right, rightDetails);
 setDetails(products.left, leftDetails);
 setServices();
 menuIcon.addEventListener('click', showHideMenu);
 closeIcon.addEventListener('click', showHideMenu);
+
+observer.observe(DRImage);
+service.forEach((el) => {
+	observer.observe(el);
+});

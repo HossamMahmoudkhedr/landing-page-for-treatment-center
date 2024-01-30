@@ -27,19 +27,28 @@ ul li {
 }
 
 li,
-p {
-	font-size: 22.84px;
+p,
+a {
+	font-size: 16px;
 }
 a {
 	text-decoration: none;
 	color: black;
 }
 .heading {
-	font-size: 65.8px;
+	font-size: 40px;
+}
+.hidden {
+	opacity: 0;
+	filter: blur(5px);
+}
+.show {
+	opacity: 1;
+	filter: blur(0px);
+	transition: all 0.5s 0.4s ease-in-out;
 }
 /* Start Hero Section */
 .hero {
-	/* height: 100vh; */
 	background-image: url(./assets/images/spices.jpg);
 	background-position: top left;
 	background-size: 75%;
@@ -52,7 +61,7 @@ a {
 }
 
 .links li a {
-	font-size: 28.3px;
+	font-size: 22px;
 }
 
 .bg_green {
@@ -64,13 +73,13 @@ a {
 }
 
 .content {
-	gap: 3rem;
+	gap: 5rem;
 }
 .hero-content {
 	margin-top: 6rem;
 }
 .hero-content div {
-	width: 43%;
+	width: 38%;
 }
 
 /* .hero-leafs {
@@ -96,39 +105,43 @@ a {
 .about {
 	background: url(./assets/images/leafs-bg.png), var(--green);
 	background-position: center;
-	background-size: 89%;
+	background-size: 80%;
 	background-repeat: no-repeat;
-	padding: 4rem 0 7rem 0;
+	padding: 3rem 0 6rem 0;
 }
 /* .about div div div:first-child {
 	width: 57.5%;
 } */
+.about .container div > div img {
+	width: 90%;
+}
 .about div div div:last-child {
 	width: 42.5%;
 }
 .about div div div:last-child p {
-	font-size: 21.05px;
+	/* font-size: 21.05px; */
 	margin-bottom: 7px;
 }
 /* End About Section */
 
 /* Start Products Section */
 .products {
-	background-image: url(./assets/images/spices2.jpg);
-	background-position: top left;
-	background-size: 60%;
-	background-repeat: no-repeat;
+	/* background-size: 55%; */
 	padding-bottom: 2rem;
+}
+.products .container {
+	background-image: url(./assets/images/spices2.jpg);
+	background-repeat: no-repeat;
 }
 
 /* End Products Section */
 /* Start Services Section */
 .services div h4 {
-	font-size: 36.69px;
+	font-size: 22px;
 }
 
 .service {
-	height: 324px;
+	height: 270px;
 }
 /* End Services Section */
 /* Start Footer */
@@ -139,22 +152,19 @@ footer {
 footer div div {
 	gap: 4rem;
 }
-footer div div:last-child a {
+/* footer div div:last-child a {
 	font-size: 22.84px;
-}
+} */
 /* End Footer */
 
 /* Start Media Query */
+@media (max-width: 768px) {
+	.hero {
+		height: 100vh;
+	}
+}
 
 @media (max-width: 992px) {
-	.heading {
-		font-size: 40px;
-	}
-	li,
-	p {
-		font-size: 16px;
-	}
-
 	/* Start Responsive Hero section */
 	.menu,
 	.close {
@@ -185,9 +195,12 @@ footer div div:last-child a {
 		padding: 4rem 0 4rem 0;
 		background-image: none;
 	}
-	.about div div div img {
+	.about .container div > div img {
 		width: 300px;
 	}
+	/* .about div div div img {
+		width: 300px;
+	} */
 	.about div div div:last-child {
 		width: auto;
 	}
@@ -198,7 +211,7 @@ footer div div:last-child a {
 	/* End Responsive About Section */
 
 	/* Start Responsive Products Section */
-	.products {
+	.products .container {
 		background-image: none;
 	}
 	/* End Responsive Products Section */
@@ -216,6 +229,19 @@ footer div div:last-child a {
 		font-size: 16px;
 	}
 	/* End Responsive Services Section */
+}
+
+@media (max-width: 1200px) {
+	.about {
+		background-size: 95%;
+	}
+}
+
+@media (min-width: 1400px) {
+	.hero {
+		background-position-x: 0% !important;
+		background-position-y: 90% !important;
+	}
 }
 
 /* End Media Query */
